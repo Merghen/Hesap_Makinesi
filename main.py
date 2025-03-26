@@ -21,6 +21,19 @@ class Arayuz():
         pass
 
     def sonucu_getir(self,islem,x,y):
+        """
+            Arayüzde seçilen işlemi alır ve hesaplamayı yapar.
+
+            Parametreler:
+                islem: Yapılacak işlemin türü.
+                x: işlem yapılacak 1. sayı
+                y: işlem yapılacak 2. sayı
+
+            Dönüş:
+            float: İşlemin sonucu
+        """
+
+
         # Eğer işlem bölme ise:
         if(islem=="4"):
             kalanli_mi=input("Kalanlı Bölme için: '1' \nKalansız Bölme için: '2' tuşuna basınız  ").strip().lower()
@@ -43,6 +56,11 @@ class Arayuz():
         return sonuc    
 
     def arayuz_getir(self):
+        """
+            Arayüzü dönderir.
+            
+        """
+        
         while(True):  
             Arayuz.islem = input("İşlem seç \n- toplama için: '1'\n- çıkarma için: '2' \n- çarpma için: '3' \n- bölme için: '4' \n- çıkmak için 'x' tuşuna basınız ").strip().lower()
             if(Arayuz.islem in Arayuz.aktif_islemler.keys()):

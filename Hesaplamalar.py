@@ -13,6 +13,17 @@ class Toplama(Islem):
         pass
         
     def hesapla(self, x,y):
+        """
+            Toplama işlemini yapar
+
+            Parametreler:
+
+                x: işlem yapılacak 1. sayı
+                y: işlem yapılacak 2. sayı
+
+            Dönüş:
+            float: İşlemin sonucu
+        """
 
         sonuc=x+y
         return sonuc
@@ -23,6 +34,17 @@ class Cikarma(Islem):
         pass
         
     def hesapla(self, x,y):
+        """
+            Çıkarma işlemini yapar
+
+            Parametreler:
+
+                x: işlem yapılacak 1. sayı
+                y: işlem yapılacak 2. sayı
+
+            Dönüş:
+            float: İşlemin sonucu
+        """
 
         sonuc=x-y
         return sonuc
@@ -33,6 +55,17 @@ class Caprma(Islem):
         pass
         
     def hesapla(self, x,y):
+        """
+            Çarpma işlemini yapar
+
+            Parametreler:
+
+                x: işlem yapılacak 1. sayı
+                y: işlem yapılacak 2. sayı
+
+            Dönüş:
+            float: İşlemin sonucu
+        """
 
         sonuc=x*y
         return sonuc
@@ -43,6 +76,19 @@ class Bolme(Islem):
         pass
         
     def hesapla(self,x,y,kalanli=False):
+        """
+            Bölme işlemini yapar
+
+            Parametreler:
+
+                x: işlem yapılacak 1. sayı
+                y: işlem yapılacak 2. sayı
+                kalanli: İşlemin kalanlı yapılıp yapılmayacağını tutar.
+
+            Dönüş:
+            float: İşlemin sonucu
+        """
+
         if(kalanli==True):
             sonuc=x/y
         else:
