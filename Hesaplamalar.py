@@ -1,9 +1,10 @@
 from abc import ABC, abstractmethod
+import math
 
 class Islem(ABC):
 
     @abstractmethod
-    def hesapla(self, x,y):
+    def hesapla(self):
         pass
 
 
@@ -97,3 +98,65 @@ class Bolme(Islem):
         return sonuc
 
 
+class Karakok(Islem):
+
+    def __init__(self):
+        pass
+        
+    def hesapla(self, x):
+        """
+            Karakök işlemini yapar
+
+            Parametreler:
+
+                x: işlem yapılacak sayı
+
+            Dönüş:
+            float: İşlemin sonucu
+        """
+
+        sonuc=math.sqrt(x)
+        return sonuc
+
+class Us_Alma(Islem):
+
+    def __init__(self):
+        pass
+        
+    def hesapla(self, x,y):
+        """
+            Üs alma işlemini yapar
+
+            Parametreler:
+
+                x: işlem yapılacak 1. sayı
+                y: işlem yapılacak 2. sayı
+
+            Dönüş:
+            float: İşlemin sonucu
+        """
+
+        sonuc=x**y
+        return sonuc
+
+
+class Mod(Islem):
+
+    def __init__(self):
+        pass
+        
+    def hesapla(self, x,y):
+        """
+           Mod alma işlemini yapar
+
+            Parametreler:
+
+                x: işlem yapılacak 1. sayı
+                y: işlem yapılacak 2. sayı
+
+            Dönüş:
+            float: İşlemin sonucu
+        """
+
+        sonuc=x%y
+        return sonuc
